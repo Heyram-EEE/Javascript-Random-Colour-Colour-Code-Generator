@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Colour Picker</title>
+</head>
+<body>
+    <center>
+        <h1 id="name" style="color: blue;font-size: 56px;">
+            <b>Colour Text</b>
+        </h1>
+        <h3 id="color">Blue</h3>
+        <button id="btn" onclick="changerandomcolor()">Change colour</button>
+    </center>
+    <script>
+        const hex=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        function changerandomcolor(){
+            document.getElementById('name').style.color=ranhex();
+            document.getElementById('color').innerHTML='Colour: '+ ranhex();
+        }
+        function ranhex(){
+            let colour="#"
+            for(let i=0;i<6;i++){
+                colour+= hex[Math.floor(Math.random()*16)];
+            }
+            return colour;
+        }
+    </script>
+</body>
+</html>
